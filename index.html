@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BauMC | Minecraft Community</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0912;color:#f5f3ff;font-family:Arial,sans-serif}
+header{background:#151020;padding:18px 6%;border-bottom:2px solid #8b5cf6;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:27px;font-weight:bold;color:#b794ff}
+nav a{color:white;text-decoration:none;margin:7px}
+.hero{text-align:center;padding:75px 20px;background:radial-gradient(ellipse at top,#44217a,#0b0912 70%)}
+.hero h1{font-size:clamp(38px,8vw,65px);margin:0}
+.purple{color:#b794ff}
+p{line-height:1.6}
+section{padding:45px 7%}
+h2{text-align:center;font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
+.card{background:#171321;padding:20px;border:1px solid #392850;border-radius:13px;text-align:center}
+button,.btn{background:#8b5cf6;color:white;border:0;padding:12px 18px;border-radius:8px;cursor:pointer;font-weight:bold;text-decoration:none;display:inline-block}
+input,textarea,select{width:100%;padding:12px;margin:7px 0 14px;border:1px solid #49365e;border-radius:8px;background:#100d18;color:white}
+form,.panel{max-width:650px;margin:auto;background:#171321;padding:22px;border:1px solid #392850;border-radius:13px}
+.owner{color:#ef4444}.admin{color:#fb7185}.mod{color:#f97316}
+.sup{color:#38bdf8}.supreme{color:#c084fc}.platin{color:#e5e7eb}
+.legende{color:#facc15}.ultra{color:#4ade80}.diamond{color:#67e8f9}.spieler{color:#d1d5db}
+small,.muted{color:#bcb2ce}
+footer{text-align:center;padding:25px;border-top:1px solid #392850;color:#bcb2ce}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">BauMC</div>
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#modi">Spielmodi</a>
+    <a href="#ränge">Ränge</a>
+    <a href="#news">News</a>
+    <a href="#support">Support</a>
+    <a href="#sup">SUP</a>
+  </nav>
+</header>
+
+<section class="hero" id="start">
+  <h1>Deine Welt.<br><span class="purple">Dein BauMC.</span></h1>
+  <p>Dein Minecraft-Abenteuer beginnt hier!</p>
+  <a class="btn" href="#modi">Spielmodi ansehen</a>
+</section>
+
+<section id="modi">
+  <h2>Spielmodi</h2>
+  <div class="grid">
+    <div class="card"><h3>🏡 Citybuild</h3><p>Baue deine Stadt.</p></div>
+    <div class="card"><h3>🌲 Survival</h3><p>Überlebe und erkunde.</p></div>
+    <div class="card"><h3>🌾 Farmwelt</h3><p>Sammle Ressourcen.</p></div>
+    <div class="card"><h3>🏰 Plotwelt</h3><p>Baue auf deinem Plot.</p></div>
+  </div>
+</section>
+
+<section id="ränge">
+  <h2>Unsere Ränge</h2>
+  <div class="grid">
+    <div class="card owner">Owner</div>
+    <div class="card admin">Admin</div>
+    <div class="card mod">Mod</div>
+    <div class="card sup">Sup</div>
+    <div class="card supreme">Supreme</div>
+    <div class="card platin">Platin</div>
+    <div class="card legende">Legende</div>
+    <div class="card ultra">Ultra</div>
+    <div class="card diamond">Diamond</div>
+    <div class="card spieler">Spieler</div>
+  </div>
+</section>
+
+<section id="news">
+  <h2>BauMC News</h2>
+  <div class="panel">
+    <p>🚀 **BauMC entsteht!**</p>
+    <p class="muted">Neue Nachrichten kannst du über den SUP-Bereich vorbereiten.</p>
+  </div>
+  <form id="newsForm">
+    <h3>News veröffentlichen</h3>
+    <label>News-Titel</label>
+    <input id="newsTitle" required maxlength="150" placeholder="z. B. BauMC startet bald">
+    <label>Nachricht</label>
+    <textarea id="newsText" required maxlength="3000" placeholder="Deine News..."></textarea>
+    <button type="submit">News an Discord senden</button>
+  </form>
+</section>
+
+<section id="support">
+  <h2>Support</h2>
+  <form id="supportForm">
+    <label>Dein Minecraft-Name</label>
+    <input id="playerName" required maxlength="50" placeholder="Minecraft-Name">
+    <label>Betreff</label>
+    <select id="supportTopic">
+      <option>Allgemeine Frage</option>
+      <option>Spieler melden</option>
+      <option>Technisches Problem</option>
+      <option>Sonstiges</option>
+    </select>
+    <label>Deine Nachricht</label>
+    <textarea id="supportText" required maxlength="3000" placeholder="Wie können wir helfen?"></textarea>
+    <button type="submit">Support-Anfrage senden</button>
+  </form>
+</section>
+
+<section id="sup">
+  <h2>SUP-Team</h2>
+  <div class="panel">
+    <p>Team-Verwaltung für BauMC</p>
+    <p class="muted">Diese öffentliche Demo ist nicht passwortgeschützt. Hier keine privaten oder vertraulichen Daten eintragen.</p>
+    <a class="btn" href="#news">News verwalten</a>
+    <a class="btn" href="#support">Support ansehen</a>
+  </div>
+</section>
+
+<footer>© 2026 BauMC · Minecraft Community</footer>
+
+<script>
+// WEBHOOK: Trage deine Discord-Webhook-URL zwischen die Anführungszeichen ein.
+// Achtung: In einer öffentlichen Website kann jeder diese URL auslesen.
+const DISCORD_WEBHOOK_URL = "DEIN_WEBHOOK_HIER_EINFUEGEN";
+
+async function sendDiscord(title, message) {
+  if (!DISCORD_WEBHOOK_URL.startsWith("https://discord.com/api/webhooks/")) {
+    alert("Bitte trage zuerst deinen Webhook im Code ein.");
+    return;
+  }
+
+  try {
+    const response = await fetch(https://discord.com/api/webhooks/1563444872872984627/FrFo_JEOcpVOCqmA7V91FpV9e8bNmfTLZiyOdyHY9GCg0P8l40h_vIa5_GqgqX6a7gGP, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        allowed_mentions: {parse: []},
+        embeds: [{
+          title: title,
+          description: message,
+          color: 9077247,
+          footer: {text: "BauMC Website"}
+        }]
+      })
+    });
+
+    if (!response.ok) throw new Error("Discord-Anfrage fehlgeschlagen");
+    alert("Erfolgreich an Discord gesendet!");
+  } catch (error) {
+    alert("Senden fehlgeschlagen. Prüfe den Webhook und die Verbindung.");
+  }
+}
+
+document.getElementById("newsForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  const title = document.getElementById("newsTitle").value.trim();
+  const message = document.getElementById("newsText").value.trim();
+  if (!title || !message) return;
+  await sendDiscord("📰 BauMC News: " + title, message);
+});
+
+document.getElementById("supportForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  const name = document.getElementById("playerName").value.trim();
+  const topic = document.getElementById("supportTopic").value;
+  const message = document.getElementById("supportText").value.trim();
+  if (!name || !message) return;
+  await sendDiscord("🎫 Neue BauMC Support-Anfrage", 
+    "**Minecraft-Name:** " + name + "\n**Thema:** " + topic + "\n\n" + message);
+});
+</script>
+</body>
+</html>
